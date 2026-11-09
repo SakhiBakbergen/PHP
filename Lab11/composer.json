@@ -1,0 +1,29 @@
+{
+    "name": "student/library-loans",
+    "description": "Библиотека: выдача и возврат книг, автозагрузка PSR-4",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.2",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "University\\Library\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "University\\Library\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@php -l public/index.php",
+            "@php tests/run.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
